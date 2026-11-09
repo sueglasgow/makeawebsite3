@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A friendly field guide to clouds: learn their names, shapes, and stories."
+    />
+    <title>Cloud Club — a little guide to the sky</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="./#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Cloud Club home">
+        <span class="brand-mark" aria-hidden="true">☁</span>
+        <span>cloud club</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="./#clouds">Meet the clouds</a>
+        <a href="./#notebook">Sky notebook</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A tiny field guide for curious sky-watchers</p>
+          <h1 id="hero-title">The sky is having a <span>soft day.</span></h1>
+          <p class="hero-intro">
+            Clouds are always on the move. Get to know a few of the shapes
+            drifting overhead, then take a moment to look up.
+          </p>
+          <a class="button button-dark" href="./#clouds">Let’s look up <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="sky-art" role="img" aria-label="Illustration of fluffy clouds drifting in a blue sky">
+          <span class="sun" aria-hidden="true"></span>
+          <span class="cloud cloud-back" aria-hidden="true"></span>
+          <span class="cloud cloud-front" aria-hidden="true"></span>
+          <span class="bird bird-one" aria-hidden="true">⌒</span>
+          <span class="bird bird-two" aria-hidden="true">⌒</span>
+          <span class="sky-note">look up<br />slow down</span>
+        </div>
+      </section>
+
+      <section class="cloud-section" id="clouds" aria-labelledby="clouds-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A few familiar faces</p>
+            <h2 id="clouds-title">Who’s floating by?</h2>
+          </div>
+          <p>Cloud names are clues: they describe what a cloud looks like or where it hangs out.</p>
+        </div>
+
+        <div class="cloud-grid">
+          <article class="cloud-card card-cumulus">
+            <div class="cloud-symbol" aria-hidden="true">☁</div>
+            <p class="cloud-height">Low &amp; fluffy</p>
+            <h3>Cumulus</h3>
+            <p>Bright, puffy clouds with flat bottoms. They often show up on fair-weather days.</p>
+          </article>
+          <article class="cloud-card card-cirrus">
+            <div class="cloud-symbol" aria-hidden="true">〰</div>
+            <p class="cloud-height">High &amp; wispy</p>
+            <h3>Cirrus</h3>
+            <p>Delicate streaks of ice crystals, brushed across the upper sky like a paintbrush.</p>
+          </article>
+          <article class="cloud-card card-stratus">
+            <div class="cloud-symbol" aria-hidden="true">☰</div>
+            <p class="cloud-height">Low &amp; layered</p>
+            <h3>Stratus</h3>
+            <p>A smooth gray blanket that can cover the sky and sometimes bring a little drizzle.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="notebook" id="notebook" aria-labelledby="notebook-title">
+        <div class="notebook-copy">
+          <p class="eyebrow">A pocket-sized sky fact</p>
+          <h2 id="notebook-title">Every cloud has a story.</h2>
+          <p id="cloud-fact" class="fact" aria-live="polite">
+            Clouds form when water vapor cools and gathers into tiny water droplets or ice crystals.
+          </p>
+          <button class="button button-light" id="fact-button" type="button">
+            Another little fact <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <div class="notebook-doodle" aria-hidden="true">
+          <span class="doodle-sun"></span>
+          <span class="doodle-cloud">☁</span>
+          <span class="doodle-star">✳</span>
+          <span class="doodle-caption">tiny wonders<br />above us</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="./" aria-label="Cloud Club home">
+        <span class="brand-mark" aria-hidden="true">☁</span>
+        <span>cloud club</span>
+      </a>
+      <p>Made for the curious. Best enjoyed with a window nearby.</p>
+      <a href="./#main">Back to the top ↑</a>
+    </footer>
+  </body>
+</html>
