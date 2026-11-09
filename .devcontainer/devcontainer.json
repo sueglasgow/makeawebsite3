@@ -1,0 +1,73 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+{
+  "name": "Ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:noble",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest",
+      "extensions": "github/gh-copilot"
+    }
+  },
+  "portsAttributes": {
+    "3000-9000": {
+      "label": "Site",
+      "onAutoForward": "openPreview",
+      "visibility": "public"
+    }
+  },
+  "updateContentCommand":"npm install -g @github/copilot",
+  "postAttachCommand": "bash .helpers/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jkearins.action-buttons-ext@0.1.1",
+        "dbaeumer.vscode-eslint",
+        "github.copilot",
+        "github.copilot-chat"
+      ],
+      "settings": {
+        "files.exclude": {
+          "package-lock.json": true,
+          "node_modules/": true
+        },
+        "chat.sendElementsToChat.enabled": false,
+        "editor.minimap.enabled": false,
+        "actionButtons": {
+          "commands": [
+            {
+              "name": "🌈 Prettify",
+              "singleInstance": true,
+              "useVsCodeApi": true,
+              "command": "editor.action.formatDocument",
+              "tooltip": "Tidy up your code"
+            },
+            {
+              "name": "🔗 Share",
+              "singleInstance": true,
+              "command": "bash .helpers/share.sh",
+              "tooltip": "Grab a link to share your draft site"
+            },
+            {
+              "name": "🚀 Publish",
+              "singleInstance": true,
+              "command": "bash .helpers/publish.sh",
+              "tooltip": "Publish to GitHub Pages"
+            },
+            {
+              "name": "🚧 Next",
+              "singleInstance": true,
+              "command": "bash .helpers/next.sh",
+              "tooltip": "Get a next step"
+            }
+          ],
+          "defaultColor": "none",
+          "reloadButton": null
+        }
+      }
+    }
+  }
+}
