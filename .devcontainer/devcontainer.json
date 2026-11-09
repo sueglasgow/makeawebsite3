@@ -15,8 +15,7 @@
   "portsAttributes": {
     "3000-9000": {
       "label": "Site",
-      "onAutoForward": "openPreview",
-      "visibility": "public"
+      "onAutoForward": "openBrowserOnce"
     }
   },
   "updateContentCommand":"npm install -g @github/copilot",
